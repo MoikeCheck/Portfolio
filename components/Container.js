@@ -79,6 +79,16 @@ const Container = ({ children }) => {
               Contact
             </Button>
           </Link>
+          <Link href="/cv" passHref>
+            <Button
+              as="a"
+              variant="ghost"
+              p={[1, 2, 4]}
+              _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            >
+              CV
+            </Button>
+          </Link>
         </Box>
         <DarkModeSwitch />
       </StickyNav>

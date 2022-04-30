@@ -28,40 +28,40 @@ export default function Index() {
         justifyContent="center"
         alignItems="flex-start"
         m="0 auto 4rem auto"
+        pt={20}
         maxWidth="700px"
         px={2}
       >
         <Flex
-          flexDirection="column"
+          flexDirection="row"
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
         >
-          <Heading mb={2}>Hi, I'm Mike Wheatley</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante
-            nunc, finibus sit amet purus quis, congue vulputate ipsum. Phasellus
-            lobortis bibendum orci, quis imperdiet lectus imperdiet porttitor.
-          </Text>
+          <Flex
+            flexDirection="column"
+            justifyContent="flex-start"
+            alignItems="flex-start"
+            maxWidth="700px"
+          >
+            <Heading mb={2}>Hi, I'm Mike Wheatley</Heading>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante
+              nunc, finibus sit amet purus quis, congue vulputate ipsum.
+              Phasellus lobortis bibendum orci, quis imperdiet lectus imperdiet
+              porttitor.
+            </Text>
+          </Flex>
           <Image
-            justifyContent="center"
-            borderRadius="full"
+            ml={12}
             boxSize="200px"
             src="/assets/SelfImage.png"
             alt="Image of Mike Wheatley"
           />
-          <Link href="/cv" passHref>
-            <Button
-              as="a"
-              data-splitbee-event="Button Click"
-              data-splitbee-event-type="CV"
-            >
-              View CV
-            </Button>
-          </Link>
         </Flex>
       </Stack>
       <Stack
+        pt={20}
         spacing={8}
         direction="row"
         justifyContent="center"

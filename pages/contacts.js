@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Heading, Stack, Box } from "@chakra-ui/react";
+import { Heading, Stack, Image, Text } from "@chakra-ui/react";
 
 import Container from "../components/Container";
 
@@ -9,21 +9,50 @@ const Contacts = () => {
       <Head>
         <title>Contacts - Mike Wheatley</title>
       </Head>
+      <Text textAlign={"center"} pt={10}>
+        If you need to contact me please find me details below.
+      </Text>
       <Stack
+        pt={20}
         spacing={8}
         direction="row"
         justifyContent="center"
         alignItems="flex-start"
       >
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Heading fontSize="xl">LinkedIn</Heading>
-        </Box>
-        <Box p={5} shadow="md" borderWidth="1px">
-          <Heading fontSize="xl">Email</Heading>
-        </Box>
-        <Box pb={9} p={5} m={20} shadow="md" borderWidth="1px">
-          <Heading fontSize="xl">Github</Heading>
-        </Box>
+        <Stack>
+          <Image
+            ml={12}
+            boxSize="200px"
+            src="/assets/linkedin.png"
+            alt="LinkedIn icon image"
+          />
+          <Heading fontSize="xl" textAlign={"center"}>
+            LinkedIn
+          </Heading>
+        </Stack>
+
+        <Stack>
+          <Image
+            ml={12}
+            boxSize="200px"
+            src="/assets/email.png"
+            alt="Email icon image"
+          />
+          <Heading fontSize="xl" textAlign={"center"}>
+            Email
+          </Heading>
+        </Stack>
+        <Stack>
+          <Image
+            ml={12}
+            boxSize="200px"
+            src="/assets/github.png"
+            alt="Github icon image"
+          />
+          <Heading fontSize="xl" textAlign={"center"}>
+            Github
+          </Heading>
+        </Stack>
       </Stack>
     </Container>
   );
