@@ -91,7 +91,10 @@ const Contacts = () => {
                     />
                   </Link>
 
-                  <Link href="http://linkedin.com/in/michael-wheatley/" passHref>
+                  <Link
+                    href="http://linkedin.com/in/michael-wheatley/"
+                    passHref
+                  >
                     <IconButton
                       aria-label="linkedin"
                       variant="ghost"
@@ -116,9 +119,10 @@ const Contacts = () => {
                   <VStack spacing={5}>
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
-
                       <InputGroup>
-                        <InputLeftElement children={<BsPerson />} />
+                        <InputLeftElement>
+                          <BsPerson />
+                        </InputLeftElement>
                         <Input
                           type="text"
                           name="name"
@@ -129,9 +133,10 @@ const Contacts = () => {
 
                     <FormControl isRequired>
                       <FormLabel>Email</FormLabel>
-
                       <InputGroup>
-                        <InputLeftElement children={<MdOutlineEmail />} />
+                        <InputLeftElement>
+                          <MdOutlineEmail />{" "}
+                        </InputLeftElement>
                         <Input
                           type="email"
                           name="email"
