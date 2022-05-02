@@ -32,7 +32,7 @@ export default function Projects() {
 
   const navHoverBg = {
     light: "gray.300",
-    dark: "gray.800",
+    dark: "gray.600",
   };
 
   return (

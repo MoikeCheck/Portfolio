@@ -10,7 +10,7 @@ const Container = ({ children }) => {
 
   const bgColor = {
     light: "white",
-    dark: "#171717",
+    dark: "gray.800",
   };
 
   const color = {
@@ -20,7 +20,7 @@ const Container = ({ children }) => {
 
   const navHoverBg = {
     light: "gray.300",
-    dark: "gray.800",
+    dark: "gray.600",
   };
 
   const StickyNav = styled(Flex)`
@@ -99,8 +99,6 @@ const Container = ({ children }) => {
         as="main"
         justifyContent="center"
         flexDirection="column"
-        bg={bgColor[colorMode]}
-        color={color[colorMode]}
         px={[0, 4, 4]}
         mt={[4, 8, 8]}
       >
