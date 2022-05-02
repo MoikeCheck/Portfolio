@@ -19,8 +19,8 @@ const Container = ({ children }) => {
   };
 
   const navHoverBg = {
-    light: "gray.600",
-    dark: "gray.300",
+    light: "gray.300",
+    dark: "gray.800",
   };
 
   const StickyNav = styled(Flex)`

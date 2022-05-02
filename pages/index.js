@@ -2,16 +2,16 @@ import Head from "next/head";
 import NextLink from "next/link";
 import Link from "next/link";
 import {
-  useColorMode,
   Heading,
   Text,
   Flex,
   Stack,
-  Button,
   Image,
   Box,
   UnorderedList,
   ListItem,
+  HStack,
+  Spacer,
 } from "@chakra-ui/react";
 
 import Container from "../components/Container";
@@ -45,14 +45,23 @@ export default function Index() {
             maxWidth="700px"
           >
             <Heading mb={2}>Hi, I'm Mike Wheatley</Heading>
+            <Text mb={1}>
+              I’m a Junior Development looking to break into the tech industry
+              drawing motivation from an admiration of tech and awe of what
+              coding can achieve. I have collaborated on projects, networked
+              with industry professionals and studied in my spare time to reach
+              a point where I am at today with JavaScript, HTML and CSS.
+            </Text>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante
-              nunc, finibus sit amet purus quis, congue vulputate ipsum.
-              Phasellus lobortis bibendum orci, quis imperdiet lectus imperdiet
-              porttitor.
+              I have more recently graduated from a 12 week software bootcamp,
+              Northcoders, which has given me solid foundations for my future
+              learning. I am ready and excited for the next step in my new
+              career to maintain momentum and continue developing, creating
+              projects within a professional setting.
             </Text>
           </Flex>
           <Image
+            mt={10}
             ml={12}
             boxSize="200px"
             src="/assets/SelfImage.png"
@@ -60,16 +69,21 @@ export default function Index() {
           />
         </Flex>
       </Stack>
-      {/* <Heading fontSize="2xl">Skills</Heading> */}
+      <HStack justifyContent="center">
+        <Heading fontSize="2xl">Skills</Heading>
+      </HStack>
       <Stack
-        pt={20}
+        pt={4}
+        pb={20}
         spacing={8}
         direction="row"
         justifyContent="center"
         alignItems="flex-start"
       >
         <Box p={5} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl">Backend</Heading>
+          <Heading fontSize="xl" mb={2}>
+            Backend
+          </Heading>
           <UnorderedList>
             <ListItem>PostgreSQL</ListItem>
             <ListItem>Jest</ListItem>
@@ -81,7 +95,9 @@ export default function Index() {
         </Box>
 
         <Box p={5} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl">Frontend</Heading>
+          <Heading fontSize="xl" mb={2}>
+            Frontend
+          </Heading>
           <UnorderedList>
             <ListItem>JavaScript</ListItem>
             <ListItem>React</ListItem>
@@ -94,7 +110,9 @@ export default function Index() {
         </Box>
 
         <Box pb={9} p={5} m={20} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl">Additional</Heading>
+          <Heading fontSize="xl" mb={2}>
+            Additional
+          </Heading>
           <UnorderedList>
             <ListItem>Git</ListItem>
             <ListItem>Kanban</ListItem>
