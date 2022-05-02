@@ -60,6 +60,7 @@ export default function Index() {
           />
         </Flex>
       </Stack>
+      {/* <Heading fontSize="2xl">Skills</Heading> */}
       <Stack
         pt={20}
         spacing={8}
@@ -67,7 +68,7 @@ export default function Index() {
         justifyContent="center"
         alignItems="flex-start"
       >
-        <Box p={5} shadow="md" borderWidth="1px">
+        <Box p={5} shadow="md" borderWidth="0px">
           <Heading fontSize="xl">Backend</Heading>
           <UnorderedList>
             <ListItem>PostgreSQL</ListItem>
@@ -79,7 +80,7 @@ export default function Index() {
           </UnorderedList>
         </Box>
 
-        <Box p={5} shadow="md" borderWidth="1px">
+        <Box p={5} shadow="md" borderWidth="0px">
           <Heading fontSize="xl">Frontend</Heading>
           <UnorderedList>
             <ListItem>JavaScript</ListItem>
@@ -92,7 +93,7 @@ export default function Index() {
           </UnorderedList>
         </Box>
 
-        <Box pb={9} p={5} m={20} shadow="md" borderWidth="1px">
+        <Box pb={9} p={5} m={20} shadow="md" borderWidth="0px">
           <Heading fontSize="xl">Additional</Heading>
           <UnorderedList>
             <ListItem>Git</ListItem>

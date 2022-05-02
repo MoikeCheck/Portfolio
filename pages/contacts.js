@@ -19,7 +19,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 const Contacts = () => {
@@ -76,7 +76,7 @@ const Contacts = () => {
                     />
                   </Tooltip>
 
-                  <Link href="#">
+                  <Link href="https://github.com/MoikeCheck" passHref>
                     <IconButton
                       aria-label="github"
                       variant="ghost"
@@ -91,21 +91,7 @@ const Contacts = () => {
                     />
                   </Link>
 
-                  <Link href="#">
-                    <IconButton
-                      aria-label="twitter"
-                      variant="ghost"
-                      size="lg"
-                      icon={<BsTwitter size="28px" />}
-                      _hover={{
-                        bg: "blue.500",
-                        color: useColorModeValue("white", "gray.700"),
-                      }}
-                      isRound
-                    />
-                  </Link>
-
-                  <Link href="#">
+                  <Link href="http://linkedin.com/in/michael-wheatley/" passHref>
                     <IconButton
                       aria-label="linkedin"
                       variant="ghost"

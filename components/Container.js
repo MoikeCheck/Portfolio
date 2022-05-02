@@ -79,7 +79,10 @@ const Container = ({ children }) => {
               Contact
             </Button>
           </Link>
-          <Link href="/cv" passHref>
+          <Link
+            href="https://docs.google.com/document/d/1ip6ndGToSAhaa4casRnstaffFJ0cKxAxHGLfoIKc5_g/edit?usp=sharing"
+            passHref
+          >
             <Button
               as="a"
               variant="ghost"
