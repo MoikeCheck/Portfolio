@@ -119,7 +119,7 @@ export default function Projects() {
               <Text mb={5}>
                 For my front-end project I built a news site pulling data from
                 an API and utilizing the React framework to create a seamless
-                multi-page site with reusable componants.
+                multi-page site with reusable components.
               </Text>
               <HStack
                 flexDirection="row"
