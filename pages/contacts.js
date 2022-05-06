@@ -21,9 +21,43 @@ import {
 import Container from "../components/Container";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { useState } from "react";
 
 const Contacts = () => {
   const { hasCopied, onCopy } = useClipboard("mikewheatley@hotmail.co.uk");
+  const [title, setTitle] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Sending");
+
+    let data = {
+      title,
+      email,
+      message,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        setTitle("");
+        setEmail("");
+        setMessage("");
+      }
+    });
+  };
 
   return (
     <Container>
@@ -125,6 +159,9 @@ const Contacts = () => {
                         </InputLeftElement>
                         <Input
                           type="text"
+                          onChange={(e) => {
+                            setTitle(e.target.value);
+                          }}
                           name="name"
                           placeholder="Your Name"
                         />
@@ -139,6 +176,9 @@ const Contacts = () => {
                         </InputLeftElement>
                         <Input
                           type="email"
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
                           name="email"
                           placeholder="Your Email"
                         />
@@ -147,9 +187,11 @@ const Contacts = () => {
 
                     <FormControl isRequired>
                       <FormLabel>Message</FormLabel>
-
                       <Textarea
                         name="message"
+                        onChange={(e) => {
+                          setMessage(e.target.value);
+                        }}
                         placeholder="Your Message"
                         rows={6}
                         resize="none"
@@ -157,6 +199,10 @@ const Contacts = () => {
                     </FormControl>
 
                     <Button
+                      onClick={(e) => {
+                        handleSubmit(e);
+                      }}
+                      type="submit"
                       colorScheme="blue"
                       bg="blue.400"
                       color="white"
