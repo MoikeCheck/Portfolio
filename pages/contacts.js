@@ -22,6 +22,7 @@ import Container from "../components/Container";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contacts = () => {
   const { hasCopied, onCopy } = useClipboard("mikewheatley@hotmail.co.uk");
@@ -29,6 +30,12 @@ const Contacts = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const notify = () =>
+    toast("Message Sent!", {
+      duration: 4000,
+      position: "top-center",
+      icon: "👏",
+    });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,6 +62,7 @@ const Contacts = () => {
         setTitle("");
         setEmail("");
         setMessage("");
+        notify();
       }
     });
   };
@@ -167,7 +175,6 @@ const Contacts = () => {
                         />
                       </InputGroup>
                     </FormControl>
-
                     <FormControl isRequired>
                       <FormLabel>Email</FormLabel>
                       <InputGroup>
@@ -184,7 +191,6 @@ const Contacts = () => {
                         />
                       </InputGroup>
                     </FormControl>
-
                     <FormControl isRequired>
                       <FormLabel>Message</FormLabel>
                       <Textarea
@@ -197,7 +203,6 @@ const Contacts = () => {
                         resize="none"
                       />
                     </FormControl>
-
                     <Button
                       onClick={(e) => {
                         handleSubmit(e);
@@ -213,6 +218,14 @@ const Contacts = () => {
                     >
                       Send Message
                     </Button>
+                    <Toaster
+                      toastOptions={{
+                        className: "",
+                        style: {
+                          margin: "300px",
+                        },
+                      }}
+                    />
                   </VStack>
                 </Box>
               </Stack>
