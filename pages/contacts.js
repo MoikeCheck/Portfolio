@@ -170,7 +170,8 @@ const Contacts = () => {
                           onChange={(e) => {
                             setTitle(e.target.value);
                           }}
-                          name="name"
+                          name="title"
+                          value={title}
                           placeholder="Your Name"
                         />
                       </InputGroup>
@@ -187,6 +188,7 @@ const Contacts = () => {
                             setEmail(e.target.value);
                           }}
                           name="email"
+                          value={email}
                           placeholder="Your Email"
                         />
                       </InputGroup>
@@ -195,6 +197,7 @@ const Contacts = () => {
                       <FormLabel>Message</FormLabel>
                       <Textarea
                         name="message"
+                        value={message}
                         onChange={(e) => {
                           setMessage(e.target.value);
                         }}
