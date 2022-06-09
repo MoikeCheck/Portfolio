@@ -33,7 +33,7 @@ export default function Index() {
         px={2}
       >
         <Flex
-          flexDirection="row"
+          flexDirection={["column", "column", "row", "row"]}
           justifyContent="flex-start"
           alignItems="flex-start"
           maxWidth="700px"
@@ -76,9 +76,9 @@ export default function Index() {
         pt={4}
         pb={20}
         spacing={8}
-        direction="row"
+        direction={["column", "row", "row", "row"]}
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems="center"
       >
         <Box p={5} shadow="md" borderWidth="0px">
           <Heading fontSize="xl" mb={2}>
