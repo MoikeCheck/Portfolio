@@ -21,51 +21,9 @@ import {
 import Container from "../components/Container";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
-import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 const Contacts = () => {
   const { hasCopied, onCopy } = useClipboard("mikewheatley@hotmail.co.uk");
-  const [title, setTitle] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const notify = () =>
-    toast("Message Sent!", {
-      duration: 4000,
-      position: "top-center",
-      icon: "👏",
-    });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Sending");
-
-    let data = {
-      title,
-      email,
-      message,
-    };
-
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log("Response received");
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setSubmitted(true);
-        setTitle("");
-        setEmail("");
-        setMessage("");
-        notify();
-      }
-    });
-  };
 
   return (
     <Container>
@@ -159,76 +117,59 @@ const Contacts = () => {
                   shadow="base"
                 >
                   <VStack spacing={5}>
-                    <FormControl isRequired>
-                      <FormLabel>Name</FormLabel>
-                      <InputGroup>
-                        <InputLeftElement>
-                          <BsPerson />
-                        </InputLeftElement>
-                        <Input
-                          type="text"
-                          onChange={(e) => {
-                            setTitle(e.target.value);
-                          }}
-                          name="title"
-                          value={title}
-                          placeholder="Your Name"
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormControl isRequired>
-                      <FormLabel>Email</FormLabel>
-                      <InputGroup>
-                        <InputLeftElement>
-                          <MdOutlineEmail />{" "}
-                        </InputLeftElement>
-                        <Input
-                          type="email"
-                          onChange={(e) => {
-                            setEmail(e.target.value);
-                          }}
-                          name="email"
-                          value={email}
-                          placeholder="Your Email"
-                        />
-                      </InputGroup>
-                    </FormControl>
-                    <FormControl isRequired>
-                      <FormLabel>Message</FormLabel>
-                      <Textarea
-                        name="message"
-                        value={message}
-                        onChange={(e) => {
-                          setMessage(e.target.value);
-                        }}
-                        placeholder="Your Message"
-                        rows={6}
-                        resize="none"
-                      />
-                    </FormControl>
-                    <Button
-                      onClick={(e) => {
-                        handleSubmit(e);
-                      }}
-                      type="submit"
-                      colorScheme="blue"
-                      bg="blue.400"
-                      color="white"
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isFullWidth
+                    <form
+                      action="https://formsubmit.co/048430bb1711d0a0b6c347896afd1cd7"
+                      method="POST"
                     >
-                      Send Message
-                    </Button>
-                    <Toaster
-                      toastOptions={{
-                        className: "",
-                        style: {
-                          margin: "300px",
-                        },
-                      }}
-                    />
+                      <FormControl isRequired>
+                        <FormLabel>Name</FormLabel>
+                        <InputGroup>
+                          <InputLeftElement>
+                            <BsPerson />
+                          </InputLeftElement>
+                          <Input
+                            type="text"
+                            name="title"
+                            placeholder="Your Name"
+                          />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl isRequired>
+                        <FormLabel>Email</FormLabel>
+                        <InputGroup>
+                          <InputLeftElement>
+                            <MdOutlineEmail />{" "}
+                          </InputLeftElement>
+                          <Input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                          />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl isRequired>
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                          name="message"
+                          placeholder="Your Message"
+                          rows={6}
+                          resize="none"
+                        />
+                      </FormControl>
+                      <Button
+                        mt={3}
+                        type="submit"
+                        colorScheme="blue"
+                        bg="blue.400"
+                        color="white"
+                        _hover={{
+                          bg: "blue.500",
+                        }}
+                        isFullWidth
+                      >
+                        Send Message
+                      </Button>
+                    </form>
                   </VStack>
                 </Box>
               </Stack>
