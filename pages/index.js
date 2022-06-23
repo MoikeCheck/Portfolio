@@ -46,7 +46,7 @@ export default function Index() {
           >
             <Heading mb={2}>Hi, I'm Mike Wheatley</Heading>
             <Text mb={1}>
-              I’m a Junior Development looking to break into the tech industry
+              I’m a Junior Developer looking to break into the tech industry
               drawing motivation from an admiration of tech and awe of what
               coding can achieve. I have collaborated on projects, networked
               with industry professionals and studied in my spare time to reach
