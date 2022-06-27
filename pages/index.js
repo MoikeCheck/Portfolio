@@ -89,6 +89,7 @@ export default function Index() {
             <ListItem>Jest</ListItem>
             <ListItem>SQL</ListItem>
             <ListItem>Node.js</ListItem>
+            <ListItem>PHP</ListItem>
             <ListItem>Firebase</ListItem>
             <ListItem>RESTful API</ListItem>
           </UnorderedList>
