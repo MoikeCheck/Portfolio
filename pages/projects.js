@@ -20,7 +20,11 @@ import {
   SiBootstrap,
   SiCss3,
   SiGithub,
+  SiPhp,
+  SiMysql,
+  SiHtml5,
 } from "react-icons/si";
+import { DiMaterializecss } from "react-icons/di";
 import { GrHeroku } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
@@ -56,6 +60,107 @@ export default function Projects() {
           alignItems="flex-start"
           maxWidth="700px"
         >
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://pet-app-beta.vercel.app/"
+            passHref
+          >
+            <Box
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              _hover={{ bg: navHoverBg[colorMode] }}
+            >
+              <Heading mb={2}>Take A Paws</Heading>
+              <Text mb={5}>
+                For this final project whilst at Northcoders my team and I were
+                tasked with creating a full stack product. Our web app MVP is a
+                platform where pet owners can locate pet services near them with
+                a range of utilities such as reviews, ratings, messaging and
+                mapping.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+              >
+                <IoLogoReact size="2rem" />
+                <IoLogoJavascript size="2rem" />
+                <SiBootstrap size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <SiFirebase size="2rem" />
+                <SiVercel size="2rem" />
+              </HStack>
+              <HStack ml={580}>
+                <Link href="https://github.com/MoikeCheck/pet-app" passHref>
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://simple-recipe-project.herokuapp.com/index.php"
+            passHref
+          >
+            <Box
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              _hover={{ bg: navHoverBg[colorMode] }}
+            >
+              <Heading mb={2}>PHP Recipe Book</Heading>
+              <Text mb={5}>
+                For this project I wanted learn more about PHP, as well as a
+                MySQL. I thought having a simple recipe book that could store
+                recipe details in a database would be a good exercise with these
+                new tools.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+              >
+                <SiPhp size="2rem" />
+                <DiMaterializecss size="2rem" />
+                <SiMysql size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <GrHeroku size="2rem" />
+              </HStack>
+              <HStack ml={580}>
+                <Link
+                  href="https://github.com/MoikeCheck/php-recipe-book.git"
+                  passHref
+                >
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
           <Link
             style={{ textDecoration: "none" }}
             href="https://zestnews.herokuapp.com/api"
@@ -130,59 +235,14 @@ export default function Projects() {
                 <IoLogoJavascript size="2rem" />
                 <SiBootstrap size="2rem" />
                 <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
                 <SiNetlify size="2rem" />
               </HStack>
               <HStack ml={580}>
-                <Link href="https://zestnews.netlify.app/" passHref>
-                  <IconButton
-                    aria-label="github"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<SiGithub />}
-                    _hover={{
-                      bg: "blue.500",
-                    }}
-                    isRound
-                  />
-                </Link>
-              </HStack>
-            </Box>
-          </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://pet-app-beta.vercel.app/"
-            passHref
-          >
-            <Box
-              p={3}
-              m={3}
-              shadow="md"
-              borderWidth="0px"
-              _hover={{ bg: navHoverBg[colorMode] }}
-            >
-              <Heading mb={2}>Take A Paws</Heading>
-              <Text mb={5}>
-                For this final project whilst at Northcoders my team and I were
-                tasked with creating a full stack product. Our web app MVP is a
-                platform where pet owners can locate pet services near them with
-                a range of utilities such as reviews, ratings, messaging and
-                mapping.
-              </Text>
-              <HStack
-                flexDirection="row"
-                justifyContent="flex-start"
-                alignItems="flex-start"
-              >
-                <IoLogoReact size="2rem" />
-                <IoLogoJavascript size="2rem" />
-                <SiBootstrap size="2rem" />
-                <SiCss3 size="2rem" />
-                <SiFirebase size="2rem" />
-                <SiVercel size="2rem" />
-              </HStack>
-              <HStack ml={580}>
-                <Link href="https://github.com/MoikeCheck/pet-app" passHref>
+                <Link
+                  href="https://github.com/MoikeCheck/nc-news.git/"
+                  passHref
+                >
                   <IconButton
                     aria-label="github"
                     variant="ghost"
