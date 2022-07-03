@@ -124,10 +124,11 @@ export default function Projects() {
             >
               <Heading mb={2}>PHP Recipe Book</Heading>
               <Text mb={5}>
-                For this project I wanted learn more about PHP, as well as a
-                MySQL. I thought having a simple recipe book that could store
-                recipe details in a database would be a good exercise with these
-                new tools.
+                For this project I wanted learn more about PHP, as well as
+                MySQL, because I am drawn to their veratility and usefullness
+                within the web developement world. I thought having a simple
+                recipe book that could store recipe details in a database would
+                be a good exercise with these new tools.
               </Text>
               <HStack
                 flexDirection="row"
