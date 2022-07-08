@@ -66,6 +66,7 @@ export default function Projects() {
             passHref
           >
             <Box
+              className="tilt-in-right-1"
               p={3}
               m={3}
               shadow="md"
@@ -116,6 +117,7 @@ export default function Projects() {
             passHref
           >
             <Box
+              className="tilt-in-left-1"
               p={3}
               m={3}
               shadow="md"
@@ -168,6 +170,7 @@ export default function Projects() {
             passHref
           >
             <Box
+              className="tilt-in-right-1"
               p={3}
               m={3}
               shadow="md"
@@ -215,6 +218,7 @@ export default function Projects() {
             passHref
           >
             <Box
+              className="tilt-in-left-1"
               p={3}
               m={3}
               shadow="md"

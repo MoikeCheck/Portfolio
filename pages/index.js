@@ -44,7 +44,9 @@ export default function Index() {
             alignItems="flex-start"
             maxWidth="700px"
           >
-            <Heading mb={2}>Hi, I'm Mike Wheatley</Heading>
+            <Heading mb={2} className="tracking-in-expand">
+              Hi, I'm Mike Wheatley
+            </Heading>
             <Text mb={1}>
               I’m a Junior Developer looking to break into the tech industry
               drawing motivation from an admiration of tech and awe of what
