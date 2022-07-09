@@ -38,6 +38,10 @@ export default function Projects() {
     light: "gray.300",
     dark: "gray.600",
   };
+  const bgColor = {
+    light: "white",
+    dark: "gray.750",
+  };
 
   return (
     <Container>
@@ -71,6 +75,7 @@ export default function Projects() {
               m={3}
               shadow="md"
               borderWidth="0px"
+              bg={bgColor[colorMode]}
               _hover={{ bg: navHoverBg[colorMode] }}
             >
               <Heading mb={2}>Take A Paws</Heading>
