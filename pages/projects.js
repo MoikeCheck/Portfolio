@@ -99,7 +99,7 @@ export default function Projects() {
                 <SiFirebase size="2rem" />
                 <SiVercel size="2rem" />
               </HStack>
-              <HStack ml={580}>
+              <HStack pl={580}>
                 <Link href="https://github.com/MoikeCheck/pet-app" passHref>
                   <IconButton
                     aria-label="github"
@@ -149,7 +149,7 @@ export default function Projects() {
                 <SiHtml5 size="2rem" />
                 <GrHeroku size="2rem" />
               </HStack>
-              <HStack ml={580}>
+              <HStack pl={580}>
                 <Link
                   href="https://github.com/MoikeCheck/php-recipe-book.git"
                   passHref
@@ -200,7 +200,7 @@ export default function Projects() {
                 <SiPostgresql size="2rem" />
                 <GrHeroku size="2rem" />
               </HStack>
-              <HStack ml={580}>
+              <HStack pl={580}>
                 <Link href="https://github.com/MoikeCheck/be-NCnews" passHref>
                   <IconButton
                     aria-label="github"
@@ -248,7 +248,7 @@ export default function Projects() {
                 <SiHtml5 size="2rem" />
                 <SiNetlify size="2rem" />
               </HStack>
-              <HStack ml={580}>
+              <HStack pl={580}>
                 <Link
                   href="https://github.com/MoikeCheck/nc-news.git/"
                   passHref
