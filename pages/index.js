@@ -1,6 +1,4 @@
 import Head from "next/head";
-import NextLink from "next/link";
-import Link from "next/link";
 import {
   Heading,
   Text,
@@ -120,6 +118,7 @@ export default function Index() {
             <ListItem>Git</ListItem>
             <ListItem>Kanban</ListItem>
             <ListItem>Agile</ListItem>
+            <ListItem>Postman</ListItem>
             <ListItem>Figma</ListItem>
           </UnorderedList>
         </Box>
