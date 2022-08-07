@@ -65,61 +65,59 @@ export default function Projects() {
           alignItems="flex-start"
           maxWidth="700px"
         >
-          <ScaleFade initialScale={2} in={1}>
-            <Link
-              style={{ textDecoration: "none" }}
-              href="https://pet-app-beta.vercel.app/"
-              passHref
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://pet-app-beta.vercel.app/"
+            passHref
+          >
+            <Box
+              className="tilt-in-right-1"
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              bg={bgColor[colorMode]}
+              _hover={{ bg: navHoverBg[colorMode] }}
             >
-              <Box
-                className="tilt-in-right-1"
-                p={3}
-                m={3}
-                shadow="md"
-                borderWidth="0px"
-                bg={bgColor[colorMode]}
-                _hover={{ bg: navHoverBg[colorMode] }}
+              <Heading mb={2}>Take A Paws</Heading>
+              <Text mb={5}>
+                For this final project whilst at Northcoders my team and I were
+                tasked with creating a full stack product. Our web app MVP is a
+                platform where pet owners can locate pet services near them with
+                a range of utilities such as reviews, ratings, messaging and
+                mapping.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
               >
-                <Heading mb={2}>Take A Paws</Heading>
-                <Text mb={5}>
-                  For this final project whilst at Northcoders my team and I
-                  were tasked with creating a full stack product. Our web app
-                  MVP is a platform where pet owners can locate pet services
-                  near them with a range of utilities such as reviews, ratings,
-                  messaging and mapping.
-                </Text>
-                <HStack
-                  flexDirection="row"
-                  justifyContent="flex-start"
-                  alignItems="flex-start"
-                >
-                  <IoLogoReact size="2rem" />
-                  <IoLogoJavascript size="2rem" />
-                  <SiBootstrap size="2rem" />
-                  <SiCss3 size="2rem" />
-                  <SiHtml5 size="2rem" />
-                  <SiFirebase size="2rem" />
-                  <SiVercel size="2rem" />
-                </HStack>
-                <HStack pl={580}>
-                  <Link href="https://github.com/MoikeCheck/pet-app" passHref>
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      fontSize="3xl"
-                      icon={<SiGithub />}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </HStack>
-              </Box>
-            </Link>
-          </ScaleFade>
-          <ScaleFade initialScale={3} in={1}>
+                <IoLogoReact size="2rem" />
+                <IoLogoJavascript size="2rem" />
+                <SiBootstrap size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <SiFirebase size="2rem" />
+                <SiVercel size="2rem" />
+              </HStack>
+              <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
+                <Link href="https://github.com/MoikeCheck/pet-app" passHref>
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
+          {/* <ScaleFade initialScale={3} in={1}>
             <Link
               style={{ textDecoration: "none" }}
               href="https://simple-recipe-project.herokuapp.com/index.php"
@@ -173,8 +171,8 @@ export default function Projects() {
                 </HStack>
               </Box>
             </Link>
-          </ScaleFade>
-          <ScaleFade initialScale={4} in={1}>
+          </ScaleFade> */}
+          {/* <ScaleFade initialScale={4} in={1}>
             <Link
               style={{ textDecoration: "none" }}
               href="https://zestnews.herokuapp.com/api"
@@ -223,8 +221,8 @@ export default function Projects() {
                 </HStack>
               </Box>
             </Link>
-          </ScaleFade>
-          <ScaleFade initialScale={5} in={1}>
+          </ScaleFade> */}
+          {/* <ScaleFade initialScale={5} in={1}>
             <Link
               style={{ textDecoration: "none" }}
               href="https://zestnews.netlify.app/"
@@ -276,7 +274,7 @@ export default function Projects() {
                 </HStack>
               </Box>
             </Link>
-          </ScaleFade>
+          </ScaleFade> */}
         </Flex>
       </Stack>
     </Container>
