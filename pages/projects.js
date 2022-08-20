@@ -9,7 +9,6 @@ import {
   Link,
   IconButton,
   useColorMode,
-  ScaleFade,
 } from "@chakra-ui/react";
 import {
   SiJest,
@@ -24,13 +23,14 @@ import {
   SiPhp,
   SiMysql,
   SiHtml5,
+  SiChakraui,
+  SiNextdotjs,
 } from "react-icons/si";
 import { DiMaterializecss } from "react-icons/di";
 import { GrHeroku } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import Container from "../components/Container";
-import DarkModeSwitch from "../components/DarkModeSwitch";
 
 export default function Projects() {
   const { colorMode } = useColorMode();
@@ -102,6 +102,59 @@ export default function Projects() {
               </HStack>
               <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
                 <Link href="https://github.com/MoikeCheck/pet-app" passHref>
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://mikewheatley.vercel.app/"
+            passHref
+          >
+            <Box
+              className="tilt-in-right-1"
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              bg={bgColor[colorMode]}
+              _hover={{ bg: navHoverBg[colorMode] }}
+            >
+              <Heading mb={2}>My Portfolio</Heading>
+              <Text mb={5}>
+                When creating this portfolio site I wanted to utilise a frame
+                work I had not used previously, NextJS. I found NextJS very
+                compelling because it gives developers the ability to build an
+                application inclusive of both server-rendered and statically
+                generated pages. I also took this opportunity to learn a new
+                styling frame work, Chakra UI. I get a lot of enjoyment out of
+                learning new tech whenever I can.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+              >
+                <SiNextdotjs size="2rem" />
+                <IoLogoJavascript size="2rem" />
+                <SiChakraui size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <SiVercel size="2rem" />
+              </HStack>
+              <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
+                <Link href="https://github.com/MoikeCheck/portfolio" passHref>
                   <IconButton
                     aria-label="github"
                     variant="ghost"
