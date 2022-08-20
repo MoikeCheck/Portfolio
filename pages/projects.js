@@ -133,12 +133,12 @@ export default function Projects() {
             >
               <Heading mb={2}>My Portfolio</Heading>
               <Text mb={5}>
-                When creating this portfolio site I wanted to utilise a frame
-                work I had not used previously, NextJS. I found NextJS very
+                When creating this portfolio site I wanted to utilise a
+                framework I had not used previously, NextJS. I found NextJS very
                 compelling because it gives developers the ability to build an
                 application inclusive of both server-rendered and statically
                 generated pages. I also took this opportunity to learn a new
-                styling frame work, Chakra UI. I get a lot of enjoyment out of
+                styling framework, Chakra UI. I get a lot of enjoyment out of
                 learning new tech whenever I can.
               </Text>
               <HStack
