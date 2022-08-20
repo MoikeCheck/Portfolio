@@ -117,164 +117,158 @@ export default function Projects() {
               </HStack>
             </Box>
           </Link>
-          {/* <ScaleFade initialScale={3} in={1}>
-            <Link
-              style={{ textDecoration: "none" }}
-              href="https://simple-recipe-project.herokuapp.com/index.php"
-              passHref
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://simple-recipe-project.herokuapp.com/index.php"
+            passHref
+          >
+            <Box
+              className="tilt-in-left-1"
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              _hover={{ bg: navHoverBg[colorMode] }}
             >
-              <Box
-                className="tilt-in-left-1"
-                p={3}
-                m={3}
-                shadow="md"
-                borderWidth="0px"
-                _hover={{ bg: navHoverBg[colorMode] }}
+              <Heading mb={2}>PHP Recipe Book</Heading>
+              <Text mb={5}>
+                For this project I wanted learn more about PHP, as well as
+                MySQL, because I am drawn to their veratility and usefullness
+                within the web developement world. I thought having a simple
+                recipe book that could store recipe details in a database would
+                be a good exercise with these new tools.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
               >
-                <Heading mb={2}>PHP Recipe Book</Heading>
-                <Text mb={5}>
-                  For this project I wanted learn more about PHP, as well as
-                  MySQL, because I am drawn to their veratility and usefullness
-                  within the web developement world. I thought having a simple
-                  recipe book that could store recipe details in a database
-                  would be a good exercise with these new tools.
-                </Text>
-                <HStack
-                  flexDirection="row"
-                  justifyContent="flex-start"
-                  alignItems="flex-start"
+                <SiPhp size="2rem" />
+                <DiMaterializecss size="2rem" />
+                <SiMysql size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <GrHeroku size="2rem" />
+              </HStack>
+              <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
+                <Link
+                  href="https://github.com/MoikeCheck/php-recipe-book.git"
+                  passHref
                 >
-                  <SiPhp size="2rem" />
-                  <DiMaterializecss size="2rem" />
-                  <SiMysql size="2rem" />
-                  <SiCss3 size="2rem" />
-                  <SiHtml5 size="2rem" />
-                  <GrHeroku size="2rem" />
-                </HStack>
-                <HStack pl={580}>
-                  <Link
-                    href="https://github.com/MoikeCheck/php-recipe-book.git"
-                    passHref
-                  >
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      fontSize="3xl"
-                      icon={<SiGithub />}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </HStack>
-              </Box>
-            </Link>
-          </ScaleFade> */}
-          {/* <ScaleFade initialScale={4} in={1}>
-            <Link
-              style={{ textDecoration: "none" }}
-              href="https://zestnews.herokuapp.com/api"
-              passHref
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://zestnews.herokuapp.com/api"
+            passHref
+          >
+            <Box
+              className="tilt-in-right-1"
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              _hover={{ bg: navHoverBg[colorMode] }}
             >
-              <Box
-                className="tilt-in-right-1"
-                p={3}
-                m={3}
-                shadow="md"
-                borderWidth="0px"
-                _hover={{ bg: navHoverBg[colorMode] }}
+              <Heading mb={2}>NC News API</Heading>
+              <Text mb={5}>
+                This was my first solo project whilst on the Northcoders
+                bootcamp. For this project I built a RESTful API that will
+                connect to my Front End project enabling the data to be
+                requested, added, modified and removed by the user.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
               >
-                <Heading mb={2}>NC News API</Heading>
-                <Text mb={5}>
-                  This was my first solo project whilst on the Northcoders
-                  bootcamp. For this project I built a RESTful API that will
-                  connect to my Front End project enabling the data to be
-                  requested, added, modified and removed by the user.
-                </Text>
-                <HStack
-                  flexDirection="row"
-                  justifyContent="flex-start"
-                  alignItems="flex-start"
-                >
-                  <IoLogoJavascript size="2rem" />
-                  <SiJest size="2rem" />
-                  <SiNodedotjs size="2rem" />
-                  <SiPostgresql size="2rem" />
-                  <GrHeroku size="2rem" />
-                </HStack>
-                <HStack pl={580}>
-                  <Link href="https://github.com/MoikeCheck/be-NCnews" passHref>
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      fontSize="3xl"
-                      icon={<SiGithub />}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </HStack>
-              </Box>
-            </Link>
-          </ScaleFade> */}
-          {/* <ScaleFade initialScale={5} in={1}>
-            <Link
-              style={{ textDecoration: "none" }}
-              href="https://zestnews.netlify.app/"
-              passHref
+                <IoLogoJavascript size="2rem" />
+                <SiJest size="2rem" />
+                <SiNodedotjs size="2rem" />
+                <SiPostgresql size="2rem" />
+                <GrHeroku size="2rem" />
+              </HStack>
+              <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
+                <Link href="https://github.com/MoikeCheck/be-NCnews" passHref>
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="https://zestnews.netlify.app/"
+            passHref
+          >
+            <Box
+              className="tilt-in-left-1"
+              p={3}
+              m={3}
+              shadow="md"
+              borderWidth="0px"
+              _hover={{ bg: navHoverBg[colorMode] }}
             >
-              <Box
-                className="tilt-in-left-1"
-                p={3}
-                m={3}
-                shadow="md"
-                borderWidth="0px"
-                _hover={{ bg: navHoverBg[colorMode] }}
+              <Heading mb={4}>NC News</Heading>
+              <Text mb={5}>
+                For my front-end project I built a news site pulling data from
+                an API and utilizing the React framework to create a seamless
+                multi-page site with reusable components.
+              </Text>
+              <HStack
+                flexDirection="row"
+                justifyContent="flex-start"
+                alignItems="flex-start"
               >
-                <Heading mb={4}>NC News</Heading>
-                <Text mb={5}>
-                  For my front-end project I built a news site pulling data from
-                  an API and utilizing the React framework to create a seamless
-                  multi-page site with reusable components.
-                </Text>
-                <HStack
-                  flexDirection="row"
-                  justifyContent="flex-start"
-                  alignItems="flex-start"
+                <IoLogoReact size="2rem" />
+                <IoLogoJavascript size="2rem" />
+                <SiBootstrap size="2rem" />
+                <SiCss3 size="2rem" />
+                <SiHtml5 size="2rem" />
+                <SiNetlify size="2rem" />
+              </HStack>
+              <HStack pl={[280, 580, 580, 580]} pt={[15, 0, 0, 0]}>
+                <Link
+                  href="https://github.com/MoikeCheck/nc-news.git/"
+                  passHref
                 >
-                  <IoLogoReact size="2rem" />
-                  <IoLogoJavascript size="2rem" />
-                  <SiBootstrap size="2rem" />
-                  <SiCss3 size="2rem" />
-                  <SiHtml5 size="2rem" />
-                  <SiNetlify size="2rem" />
-                </HStack>
-                <HStack pl={580}>
-                  <Link
-                    href="https://github.com/MoikeCheck/nc-news.git/"
-                    passHref
-                  >
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      fontSize="3xl"
-                      icon={<SiGithub />}
-                      _hover={{
-                        bg: "blue.500",
-                      }}
-                      isRound
-                    />
-                  </Link>
-                </HStack>
-              </Box>
-            </Link>
-          </ScaleFade> */}
+                  <IconButton
+                    aria-label="github"
+                    variant="ghost"
+                    size="lg"
+                    fontSize="3xl"
+                    icon={<SiGithub />}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    isRound
+                  />
+                </Link>
+              </HStack>
+            </Box>
+          </Link>
         </Flex>
       </Stack>
     </Container>
