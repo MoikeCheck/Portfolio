@@ -59,6 +59,11 @@ export default function Index() {
               career to maintain momentum and continue developing, creating
               projects within a professional setting.
             </Text>
+            <Text>
+              I'm currently working as a Junior Integrations Developer utilising
+              Powershell scripting along with APIs to help bridge the gap
+              between softwares.
+            </Text>
           </Flex>
           <Image
             mt={10}
@@ -116,6 +121,7 @@ export default function Index() {
           </Heading>
           <UnorderedList>
             <ListItem>Git</ListItem>
+            <ListItem>Powershell</ListItem>
             <ListItem>Kanban</ListItem>
             <ListItem>Agile</ListItem>
             <ListItem>Postman</ListItem>
