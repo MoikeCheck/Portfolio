@@ -9,12 +9,21 @@ import {
   UnorderedList,
   ListItem,
   HStack,
-  Spacer,
+  Show,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  Tooltip,
 } from "@chakra-ui/react";
 
 import Container from "../components/Container";
 
 export default function Index() {
+  let str = "blah•blah•blah";
+
+  let strArr = str.split("\u2022");
   return (
     <Container>
       <Head>
@@ -66,8 +75,8 @@ export default function Index() {
             </Text>
           </Flex>
           <Image
-            mt={10}
-            ml={12}
+            mt={[25, 10, 10, 10]}
+            ml={[50, 12, 12, 10]}
             boxSize="200px"
             src="/assets/SelfImage.png"
             alt="Image of Mike Wheatley"
@@ -85,49 +94,112 @@ export default function Index() {
         justifyContent="center"
         alignItems="center"
       >
-        <Box p={5} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl" mb={2}>
-            Backend
-          </Heading>
-          <UnorderedList>
-            <ListItem>PostgreSQL</ListItem>
-            <ListItem>Jest</ListItem>
-            <ListItem>SQL</ListItem>
-            <ListItem>Node.js</ListItem>
-            <ListItem>PHP</ListItem>
-            <ListItem>Firebase</ListItem>
-            <ListItem>RESTful API</ListItem>
-          </UnorderedList>
-        </Box>
+        <Show above="md">
+          <Box p={5} shadow="md" borderWidth="0px">
+            <Heading fontSize="xl" mb={2}>
+              Backend
+            </Heading>
+            <UnorderedList>
+              <ListItem>PostgreSQL</ListItem>
+              <ListItem>Jest</ListItem>
+              <ListItem>SQL</ListItem>
+              <ListItem>Node.js</ListItem>
+              <ListItem>PHP</ListItem>
+              <ListItem>Firebase</ListItem>
+              <ListItem>RESTful API</ListItem>
+            </UnorderedList>
+          </Box>
+          <Box p={5} shadow="md" borderWidth="0px">
+            <Heading fontSize="xl" mb={2}>
+              Frontend
+            </Heading>
+            <UnorderedList>
+              <ListItem>JavaScript</ListItem>
+              <ListItem>React</ListItem>
+              <ListItem>CSS</ListItem>
+              <ListItem>HTML</ListItem>
+              <ListItem>Bootstrap</ListItem>
+              <ListItem>Chakra UI</ListItem>
+              <ListItem>Next.js</ListItem>
+            </UnorderedList>
+          </Box>
 
-        <Box p={5} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl" mb={2}>
-            Frontend
-          </Heading>
-          <UnorderedList>
-            <ListItem>JavaScript</ListItem>
-            <ListItem>React</ListItem>
-            <ListItem>CSS</ListItem>
-            <ListItem>HTML</ListItem>
-            <ListItem>Bootstrap</ListItem>
-            <ListItem>Chakra UI</ListItem>
-            <ListItem>Next.js</ListItem>
-          </UnorderedList>
-        </Box>
+          <Box pb={9} p={5} m={20} shadow="md" borderWidth="0px">
+            <Heading fontSize="xl" mb={2}>
+              Additional
+            </Heading>
+            <UnorderedList>
+              <ListItem>Git</ListItem>
+              <ListItem>Powershell</ListItem>
+              <ListItem>Kanban</ListItem>
+              <ListItem>Agile</ListItem>
+              <ListItem>Postman</ListItem>
+              <ListItem>Figma</ListItem>
+            </UnorderedList>
+          </Box>
+        </Show>
+        <Show below="md">
+          <Tabs>
+            <TabList>
+              <Tab>
+                <Heading fontSize="xl" mb={2}>
+                  Backend
+                </Heading>
+              </Tab>
+              <Tab>
+                <Heading fontSize="xl" mb={2}>
+                  Frontend
+                </Heading>
+              </Tab>
+              <Tab>
+                <Heading fontSize="xl" mb={2}>
+                  Additional
+                </Heading>
+              </Tab>
+            </TabList>
 
-        <Box pb={9} p={5} m={20} shadow="md" borderWidth="0px">
-          <Heading fontSize="xl" mb={2}>
-            Additional
-          </Heading>
-          <UnorderedList>
-            <ListItem>Git</ListItem>
-            <ListItem>Powershell</ListItem>
-            <ListItem>Kanban</ListItem>
-            <ListItem>Agile</ListItem>
-            <ListItem>Postman</ListItem>
-            <ListItem>Figma</ListItem>
-          </UnorderedList>
-        </Box>
+            <TabPanels>
+              <TabPanel>
+                <Box p={5} shadow="md" borderWidth="0px">
+                  <UnorderedList>
+                    <ListItem>PostgreSQL</ListItem>
+                    <ListItem>Jest</ListItem>
+                    <ListItem>SQL</ListItem>
+                    <ListItem>Node.js</ListItem>
+                    <ListItem>PHP</ListItem>
+                    <ListItem>Firebase</ListItem>
+                    <ListItem>RESTful API</ListItem>
+                  </UnorderedList>
+                </Box>
+              </TabPanel>
+              <TabPanel>
+                <Box p={5} shadow="md" borderWidth="0px">
+                  <UnorderedList>
+                    <ListItem>JavaScript</ListItem>
+                    <ListItem>React</ListItem>
+                    <ListItem>CSS</ListItem>
+                    <ListItem>HTML</ListItem>
+                    <ListItem>Bootstrap</ListItem>
+                    <ListItem>Chakra UI</ListItem>
+                    <ListItem>Next.js</ListItem>
+                  </UnorderedList>
+                </Box>
+              </TabPanel>
+              <TabPanel>
+                <Box p={5} shadow="md" borderWidth="0px">
+                  <UnorderedList>
+                    <ListItem>Git</ListItem>
+                    <ListItem>Powershell</ListItem>
+                    <ListItem>Kanban</ListItem>
+                    <ListItem>Agile</ListItem>
+                    <ListItem>Postman</ListItem>
+                    <ListItem>Figma</ListItem>
+                  </UnorderedList>
+                </Box>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        </Show>
       </Stack>
     </Container>
   );
