@@ -78,7 +78,7 @@ export default function Index() {
             mt={[25, 10, 10, 10]}
             ml={[50, 12, 12, 10]}
             boxSize="200px"
-            src="/assets/SelfImage.png"
+            src="/assets/SelfImage2.png"
             alt="Image of Mike Wheatley"
           />
         </Flex>
