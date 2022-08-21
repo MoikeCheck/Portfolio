@@ -15,15 +15,28 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-  Tooltip,
+  Menu,
+  MenuButton,
+  MenuList,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { DiReact, DiAptana, DiGithubBadge } from "react-icons/di";
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
 import Container from "../components/Container";
 
 export default function Index() {
-  let str = "blah•blah•blah";
-
-  let strArr = str.split("\u2022");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isOpenTwo,
+    onOpen: onOpenTwo,
+    onClose: onCloseTwo,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenThree,
+    onOpen: onOpenThree,
+    onClose: onCloseThree,
+  } = useDisclosure();
   return (
     <Container>
       <Head>
@@ -95,48 +108,107 @@ export default function Index() {
         alignItems="center"
       >
         <Show above="md">
-          <Box p={5} shadow="md" borderWidth="0px">
-            <Heading fontSize="xl" mb={2}>
-              Backend
-            </Heading>
-            <UnorderedList>
-              <ListItem>PostgreSQL</ListItem>
-              <ListItem>Jest</ListItem>
-              <ListItem>SQL</ListItem>
-              <ListItem>Node.js</ListItem>
-              <ListItem>PHP</ListItem>
-              <ListItem>Firebase</ListItem>
-              <ListItem>RESTful API</ListItem>
-            </UnorderedList>
-          </Box>
-          <Box p={5} shadow="md" borderWidth="0px">
-            <Heading fontSize="xl" mb={2}>
-              Frontend
-            </Heading>
-            <UnorderedList>
-              <ListItem>JavaScript</ListItem>
-              <ListItem>React</ListItem>
-              <ListItem>CSS</ListItem>
-              <ListItem>HTML</ListItem>
-              <ListItem>Bootstrap</ListItem>
-              <ListItem>Chakra UI</ListItem>
-              <ListItem>Next.js</ListItem>
-            </UnorderedList>
-          </Box>
-
-          <Box pb={9} p={5} m={20} shadow="md" borderWidth="0px">
-            <Heading fontSize="xl" mb={2}>
-              Additional
-            </Heading>
-            <UnorderedList>
-              <ListItem>Git</ListItem>
-              <ListItem>Powershell</ListItem>
-              <ListItem>Kanban</ListItem>
-              <ListItem>Agile</ListItem>
-              <ListItem>Postman</ListItem>
-              <ListItem>Figma</ListItem>
-            </UnorderedList>
-          </Box>
+          <Menu isOpen={isOpen}>
+            <MenuButton
+              variant="ghost"
+              mx={1}
+              py={[1, 2, 2]}
+              px={4}
+              borderRadius={5}
+              aria-label="Courses"
+              fontWeight="normal"
+              onMouseEnter={onOpen}
+              onMouseLeave={onClose}
+            >
+              <HStack spacing="10px">
+                <Heading fontSize="xl" mb={2}>
+                  Backend
+                </Heading>{" "}
+                <DiAptana size={50} />
+              </HStack>
+              {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            </MenuButton>
+            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+              <Box p={5} shadow="md" borderWidth="0px">
+                <UnorderedList>
+                  <ListItem>PostgreSQL</ListItem>
+                  <ListItem>Jest</ListItem>
+                  <ListItem>SQL</ListItem>
+                  <ListItem>Node.js</ListItem>
+                  <ListItem>PHP</ListItem>
+                  <ListItem>Firebase</ListItem>
+                  <ListItem>RESTful API</ListItem>
+                </UnorderedList>
+              </Box>
+            </MenuList>
+          </Menu>
+          <Menu isOpen={isOpenTwo}>
+            <MenuButton
+              variant="ghost"
+              mx={1}
+              py={[1, 2, 2]}
+              px={4}
+              borderRadius={5}
+              aria-label="Courses"
+              fontWeight="normal"
+              onMouseEnter={onOpenTwo}
+              onMouseLeave={onCloseTwo}
+            >
+              <HStack spacing="10px">
+                <Heading fontSize="xl" mb={2}>
+                  Frontend
+                </Heading>{" "}
+                <DiReact size={50} />
+              </HStack>
+              {isOpenTwo ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            </MenuButton>
+            <MenuList onMouseEnter={onOpenTwo} onMouseLeave={onCloseTwo}>
+              <Box p={5} shadow="md" borderWidth="0px">
+                <UnorderedList>
+                  <ListItem>JavaScript</ListItem>
+                  <ListItem>React</ListItem>
+                  <ListItem>CSS</ListItem>
+                  <ListItem>HTML</ListItem>
+                  <ListItem>Bootstrap</ListItem>
+                  <ListItem>Chakra UI</ListItem>
+                  <ListItem>Next.js</ListItem>
+                </UnorderedList>
+              </Box>
+            </MenuList>
+          </Menu>
+          <Menu isOpen={isOpenThree}>
+            <MenuButton
+              variant="ghost"
+              mx={1}
+              py={[1, 2, 2]}
+              px={4}
+              borderRadius={5}
+              aria-label="Courses"
+              fontWeight="normal"
+              onMouseEnter={onOpenThree}
+              onMouseLeave={onCloseThree}
+            >
+              <HStack spacing="10px">
+                <Heading fontSize="xl" mb={2}>
+                  Additional
+                </Heading>{" "}
+                <DiGithubBadge size={50} />
+              </HStack>
+              {isOpenThree ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            </MenuButton>
+            <MenuList onMouseEnter={onOpenThree} onMouseLeave={onCloseThree}>
+              <Box p={5} shadow="md" borderWidth="0px">
+                <UnorderedList>
+                  <ListItem>Git</ListItem>
+                  <ListItem>Powershell</ListItem>
+                  <ListItem>Kanban</ListItem>
+                  <ListItem>Agile</ListItem>
+                  <ListItem>Postman</ListItem>
+                  <ListItem>Figma</ListItem>
+                </UnorderedList>
+              </Box>
+            </MenuList>
+          </Menu>
         </Show>
         <Show below="md">
           <Tabs>
